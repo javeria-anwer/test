@@ -26,15 +26,15 @@
 <line x1="150.0" y1="614.0" x2="678.0" y2="614.0" stroke="#d6d3cb" stroke-width="0.8"/>
 <line x1="630.0" y1="230.0" x2="630.0" y2="758.0" stroke="#d6d3cb" stroke-width="0.8"/>
 <line x1="150.0" y1="710.0" x2="678.0" y2="710.0" stroke="#d6d3cb" stroke-width="0.8"/>
-<rect x="150.0" y="230.0" width="240.0" height="384.0" fill="url(#raised)"/>
-<rect x="150.0" y="230.0" width="240.0" height="384.0" fill="none" stroke="#9c7b3c" stroke-width="1.5" stroke-dasharray="7 4"/>
+<rect x="150.0" y="230.0" width="240.0" height="528.0" fill="url(#raised)"/>
+<rect x="150.0" y="230.0" width="240.0" height="528.0" fill="none" stroke="#9c7b3c" stroke-width="1.5" stroke-dasharray="7 4"/>
 <rect x="114.0" y="194.0" width="600.0" height="36.0" fill="#2c2f36"/>
 <rect x="114.0" y="230.0" width="36.0" height="564.0" fill="#2c2f36"/>
 <rect x="678.0" y="230.0" width="36.0" height="564.0" fill="#2c2f36"/>
 <rect x="114.0" y="758.0" width="340.0" height="36.0" fill="#2c2f36"/>
 <rect x="662.0" y="758.0" width="16.0" height="36.0" fill="#2c2f36"/>
 <rect x="390.0" y="230.0" width="32.0" height="208.0" fill="url(#partition)" stroke="#2c2f36" stroke-width="1"/>
-<rect x="150.0" y="614.0" width="272.0" height="32.0" fill="url(#partition)" stroke="#2c2f36" stroke-width="1"/>
+<rect x="390.0" y="614.0" width="32.0" height="144.0" fill="url(#partition)" stroke="#2c2f36" stroke-width="1"/>
 <rect x="390.0" y="438.0" width="32.0" height="176.0" fill="url(#raised)" stroke="#9c7b3c" stroke-width="1"/>
 <rect x="422.0" y="438.0" width="80.0" height="176.0" fill="#d9c7a3" stroke="#6e5626" stroke-width="1.6"/>
 <line x1="494.0" y1="438.0" x2="494.0" y2="614.0" stroke="#6e5626" stroke-width="0.8" stroke-dasharray="3 2"/>
@@ -63,11 +63,11 @@
 <circle cx="658.0" cy="758.0" r="4" fill="#2c2f36"/>
 <rect x="454.0" y="758.0" width="6.4" height="36.0" fill="#c8894a"/>
 <rect x="655.6" y="758.0" width="6.4" height="36.0" fill="#c8894a"/>
-<rect x="263.0" y="695.0" width="14" height="14" fill="#c4c8cf" stroke="#5c6270"/>
-<line x1="265.0" y1="699.0" x2="275.0" y2="699.0" stroke="#5c6270" stroke-width="0.8"/>
-<line x1="265.0" y1="702.0" x2="275.0" y2="702.0" stroke="#5c6270" stroke-width="0.8"/>
-<line x1="265.0" y1="705.0" x2="275.0" y2="705.0" stroke="#5c6270" stroke-width="0.8"/>
-<rect x="148.4" y="662.0" width="12.8" height="80.0" fill="#b9bec7" stroke="#5c6270" stroke-width="0.8"/>
+<rect x="575.0" y="334.2" width="14" height="14" fill="#c4c8cf" fill-opacity="0.6" stroke="#5c6270" stroke-dasharray="3 2"/>
+<line x1="577.0" y1="338.2" x2="587.0" y2="338.2" stroke="#5c6270" stroke-width="0.8"/>
+<line x1="577.0" y1="341.2" x2="587.0" y2="341.2" stroke="#5c6270" stroke-width="0.8"/>
+<line x1="577.0" y1="344.2" x2="587.0" y2="344.2" stroke="#5c6270" stroke-width="0.8"/>
+<rect x="420.4" y="686.0" width="12.8" height="64.0" fill="#b9bec7" stroke="#5c6270" stroke-width="0.8"/>
 <text x="270.0" y="502.0" font-size="15" font-weight="700" text-anchor="middle" fill="#1f2a44" style="">TOILET</text>
 <text x="270.0" y="520.4" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#6e5626" style="">(raised floor +14")</text>
 <text x="270.0" y="538.8" font-size="10" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">access only from washroom</text>
@@ -77,12 +77,11 @@
 <text x="582.0" y="410.8" font-size="10" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">wall-hung</text>
 <text x="590.0" y="462.0" font-size="15" font-weight="700" text-anchor="middle" fill="#1f2a44" style="">WASHROOM</text>
 <text x="590.0" y="480.4" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">floor ±0</text>
-<text x="270.0" y="684.4" font-size="9.5" font-weight="700" text-anchor="middle" fill="#4a5470" style="">FLOOR TRAP</text>
-<text x="270.0" y="738.8" font-size="9.5" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">towel rail on wall</text>
-<text x="270.0" y="752.4" font-size="9" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">(open floor recess)</text>
-<line x1="462.0" y1="614.0" x2="470.0" y2="656.4" stroke="#b5541c" stroke-width="1.2"/>
-<rect x="426.0" y="656.4" width="134.4" height="25.6" fill="#fff4ea" stroke="#b5541c" rx="3"/>
-<text x="493.2" y="674.0" font-size="10.5" font-weight="700" text-anchor="middle" fill="#b5541c" style="">STEPS TO TOILET</text>
+<text x="582.0" y="425.2" font-size="9.5" font-weight="normal" text-anchor="middle" fill="#4a5470" style="">floor trap below basin</text>
+<text x="447.6" y="718.0" font-size="9.5" font-weight="normal" text-anchor="middle" fill="#4a5470" transform="rotate(-90 447.6 718.0)" style="">towel rail</text>
+<line x1="462.0" y1="614.0" x2="502.0" y2="656.4" stroke="#b5541c" stroke-width="1.2"/>
+<rect x="458.0" y="656.4" width="134.4" height="25.6" fill="#fff4ea" stroke="#b5541c" rx="3"/>
+<text x="525.2" y="674.0" font-size="10.5" font-weight="700" text-anchor="middle" fill="#b5541c" style="">STEPS TO TOILET</text>
 <line x1="502.0" y1="518.0" x2="678.0" y2="518.0" stroke="#3d7a57" stroke-width="1.2" marker-start="url(#arrow)" marker-end="url(#arrow)" style="color:#3d7a57"/>
 <text x="590.0" y="510.8" font-size="10.5" font-weight="700" text-anchor="middle" fill="#3d7a57" style="">22" CLEAR</text>
 <path d="M 544.0 874.0 L 558.0 856.0 L 572.0 874.0 z" fill="#1f2a44"/>
@@ -112,20 +111,12 @@
 <line x1="506.0" y1="370.0" x2="514.0" y2="362.0" stroke="#1f2a44" stroke-width="1.4"/>
 <line x1="650.0" y1="370.0" x2="658.0" y2="362.0" stroke="#1f2a44" stroke-width="1.4"/>
 <text x="582.0" y="362.0" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#1f2a44" style="">18"</text>
-<line x1="78.0" y1="230.0" x2="78.0" y2="614.0" stroke="#1f2a44" stroke-width="1"/>
+<line x1="78.0" y1="230.0" x2="78.0" y2="758.0" stroke="#1f2a44" stroke-width="1"/>
 <line x1="74.0" y1="234.0" x2="82.0" y2="226.0" stroke="#1f2a44" stroke-width="1.4"/>
 <line x1="114.0" y1="230.0" x2="70.0" y2="230.0" stroke="#8a93a6" stroke-width="0.7" stroke-dasharray="3 2"/>
-<line x1="74.0" y1="618.0" x2="82.0" y2="610.0" stroke="#1f2a44" stroke-width="1.4"/>
-<line x1="114.0" y1="614.0" x2="70.0" y2="614.0" stroke="#8a93a6" stroke-width="0.7" stroke-dasharray="3 2"/>
-<text x="71.0" y="422.0" font-size="12" font-weight="normal" text-anchor="middle" fill="#1f2a44" transform="rotate(-90 71.0 422.0)" style="">48" toilet depth</text>
-<line x1="78.0" y1="614.0" x2="78.0" y2="646.0" stroke="#1f2a44" stroke-width="1"/>
-<line x1="74.0" y1="618.0" x2="82.0" y2="610.0" stroke="#1f2a44" stroke-width="1.4"/>
-<line x1="74.0" y1="650.0" x2="82.0" y2="642.0" stroke="#1f2a44" stroke-width="1.4"/>
-<text x="71.0" y="630.0" font-size="10" font-weight="normal" text-anchor="middle" fill="#1f2a44" transform="rotate(-90 71.0 630.0)" style="">4"</text>
-<line x1="78.0" y1="646.0" x2="78.0" y2="758.0" stroke="#1f2a44" stroke-width="1"/>
-<line x1="74.0" y1="650.0" x2="82.0" y2="642.0" stroke="#1f2a44" stroke-width="1.4"/>
 <line x1="74.0" y1="762.0" x2="82.0" y2="754.0" stroke="#1f2a44" stroke-width="1.4"/>
-<text x="71.0" y="702.0" font-size="10.5" font-weight="normal" text-anchor="middle" fill="#1f2a44" transform="rotate(-90 71.0 702.0)" style="">14"</text>
+<line x1="114.0" y1="758.0" x2="70.0" y2="758.0" stroke="#8a93a6" stroke-width="0.7" stroke-dasharray="3 2"/>
+<text x="71.0" y="494.0" font-size="12" font-weight="normal" text-anchor="middle" fill="#1f2a44" transform="rotate(-90 71.0 494.0)" style="">66" toilet depth (full)</text>
 <line x1="22.0" y1="230.0" x2="22.0" y2="758.0" stroke="#1f2a44" stroke-width="1"/>
 <line x1="18.0" y1="234.0" x2="26.0" y2="226.0" stroke="#1f2a44" stroke-width="1.4"/>
 <line x1="18.0" y1="762.0" x2="26.0" y2="754.0" stroke="#1f2a44" stroke-width="1.4"/>
@@ -166,7 +157,7 @@
 <text x="872.0" y="170.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Overall bathroom (interior clear)</text>
 <text x="1135.0" y="170.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">66" × 66"  (5'-6" × 5'-6")</text>
 <text x="872.0" y="191.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Toilet enclosure (clear, raised)</text>
-<text x="1135.0" y="191.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">30" W × 48" D</text>
+<text x="1135.0" y="191.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">30" W × 66" D (full depth)</text>
 <text x="872.0" y="212.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">New partition wall</text>
 <text x="1135.0" y="212.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">4" thick (block + plaster)</text>
 <text x="872.0" y="233.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Toilet door</text>
@@ -174,7 +165,7 @@
 <text x="872.0" y="254.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Main entrance door</text>
 <text x="1135.0" y="254.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">26" opening, opens inward</text>
 <text x="872.0" y="275.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Washbasin (wall-hung)</text>
-<text x="1135.0" y="275.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">18" W × 15" projection</text>
+<text x="1135.0" y="275.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">18" W × 15" proj., floor trap below</text>
 <text x="872.0" y="296.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Compact commode</text>
 <text x="1135.0" y="296.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">15" W × 26" D (wall to bowl front)</text>
 <text x="872.0" y="317.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Steps to toilet</text>
@@ -182,7 +173,7 @@
 <text x="872.0" y="338.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Clear walk beside step</text>
 <text x="1135.0" y="338.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">22" min.</text>
 <text x="872.0" y="359.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Clear in front of commode</text>
-<text x="1135.0" y="359.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">≈20" (bowl front to parked door)</text>
+<text x="1135.0" y="359.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">40" to south wall (≈20" to open door)</text>
 <text x="872.0" y="380.0" font-size="12.5" font-weight="normal" text-anchor="start" fill="#4a5470" style="">Clear floor in front of basin</text>
 <text x="1135.0" y="380.0" font-size="12.5" font-weight="600" text-anchor="start" fill="#1f2a44" style="">51" deep (basin front to entrance)</text>
 <line x1="870" y1="399" x2="1410" y2="399" stroke="#e1e4ea"/>
@@ -194,7 +185,7 @@
 <text x="872.0" y="511.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">Step 1 (+7") sits in the washroom; step 2 (+14") is the raised</text>
 <text x="872.0" y="530.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">   threshold in the partition, level with the toilet floor.</text>
 <text x="872.0" y="549.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">Toilet door swings INTO the raised toilet so it never sweeps the steps;</text>
-<text x="872.0" y="568.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">   leaf parks against the toilet's south partition, clearing the bowl.</text>
+<text x="872.0" y="568.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">   open leaf stands clear of the bowl; enclosure runs to the south wall.</text>
 <text x="872.0" y="587.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">Washbasin on the top (north) wall, in line of sight from entrance.</text>
 <text x="872.0" y="606.0" font-size="12" font-weight="normal" text-anchor="start" fill="#2f3850" style="">Entrance door leaf parks against the east wall, clearing step 1 by ~1".</text>
 <rect x="850" y="700" width="580" height="330" fill="#ffffff" stroke="#c9cdd6" rx="6"/>

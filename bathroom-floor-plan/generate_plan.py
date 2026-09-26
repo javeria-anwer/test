@@ -11,8 +11,8 @@ EXT = 4.5          # existing outer wall thickness (drawn outside the 66" room)
 PART = 4.0         # new partition thickness
 ROOM = 66.0
 
-# Toilet enclosure (clear inside): x 0..30, y 0..48
-TW, TD = 30.0, 48.0
+# Toilet enclosure (clear inside): x 0..30, full depth to the south wall
+TW, TD = 30.0, 66.0
 # Toilet door opening in vertical partition (x 30..34)
 TDOOR_Y0, TDOOR_Y1 = 26.0, 48.0          # 22" opening
 TLEAF = 21.0
@@ -109,7 +109,7 @@ rect(EDOOR_X1, ROOM, ROOM, ROOM + EXT, **wall)               # south, right of d
 # ---------- new partition walls ----------
 pw = dict(fill="url(#partition)", stroke="#2c2f36", stroke_width=1)
 rect(TW, 0, TW + PART, TDOOR_Y0, **pw)                       # vertical, above toilet door
-rect(0, TD, TW + PART, TD + PART, **pw)                      # horizontal (south of toilet)
+rect(TW, TDOOR_Y1, TW + PART, ROOM, **pw)                    # vertical, below toilet door to south wall
 # raised threshold inside the toilet door opening (+14")
 rect(TW, TDOOR_Y0, TW + PART, TDOOR_Y1, fill="url(#raised)", stroke="#9c7b3c", stroke_width=1)
 
@@ -129,7 +129,7 @@ text(TW + PART / 2, 30.5, "2", size=10.5, weight="700", fill="#4a3a17")
 
 # ---------- toilet door (opens INTO the raised toilet, away from the steps) ----------
 hx, hy = TW, TDOOR_Y1 - 0.75
-# door leaf in open position (against south partition of toilet)
+# door leaf in open position (stands clear of the bowl)
 rect(hx - TLEAF, hy - 1.4, hx, hy, fill="#c8894a", stroke="#6e4a22", stroke_width=1)
 # swing arc from closed (vertical, in the opening) to open
 add(f'<path d="M {X(hx):.1f} {Y(hy - TLEAF):.1f} A {L(TLEAF):.1f} {L(TLEAF):.1f} 0 0 0 {X(hx - TLEAF):.1f} {Y(hy):.1f}" '
@@ -163,11 +163,12 @@ add(f'<circle cx="{X(ex):.1f}" cy="{Y(ey):.1f}" r="4" fill="#2c2f36"/>')
 rect(EDOOR_X0, ROOM, EDOOR_X0 + 0.8, ROOM + EXT, fill="#c8894a")
 rect(EDOOR_X1 - 0.8, ROOM, EDOOR_X1, ROOM + EXT, fill="#c8894a")
 
-# ---------- floor trap + towel rail in the SW recess ----------
-add(f'<rect x="{X(15)-7:.1f}" y="{Y(59)-7:.1f}" width="14" height="14" fill="#c4c8cf" stroke="#5c6270"/>')
+# ---------- floor trap (under the wall-hung basin) + towel rail on partition ----------
+TRX, TRY = (BAS_X0 + BAS_X1) / 2, 13.9
+add(f'<rect x="{X(TRX)-7:.1f}" y="{Y(TRY)-7:.1f}" width="14" height="14" fill="#c4c8cf" fill-opacity="0.6" stroke="#5c6270" stroke-dasharray="3 2"/>')
 for d in (-3, 0, 3):
-    add(f'<line x1="{X(15)-5:.1f}" y1="{Y(59)+d:.1f}" x2="{X(15)+5:.1f}" y2="{Y(59)+d:.1f}" stroke="#5c6270" stroke-width="0.8"/>')
-rect(-0.2, 54, 1.4, 64, fill="#b9bec7", stroke="#5c6270", stroke_width=0.8)   # towel rail on west wall
+    add(f'<line x1="{X(TRX)-5:.1f}" y1="{Y(TRY)+d:.1f}" x2="{X(TRX)+5:.1f}" y2="{Y(TRY)+d:.1f}" stroke="#5c6270" stroke-width="0.8"/>')
+rect(TW + PART - 0.2, 57, TW + PART + 1.4, 65, fill="#b9bec7", stroke="#5c6270", stroke_width=0.8)   # towel rail
 
 # ---------- labels ----------
 text(15, 34.0, "TOILET", size=15, weight="700")
@@ -179,14 +180,13 @@ text(54, 20.6, "WASHBASIN", size=11.5, weight="700")
 text(54, 22.6, 'wall-hung', size=10, fill="#4a5470")
 text(55, 29.0, "WASHROOM", size=15, weight="700")
 text(55, 31.3, "floor ±0", size=10.5, fill="#4a5470")
-text(15, 56.8, "FLOOR TRAP", size=9.5, weight="700", fill="#4a5470")
-text(15, 63.6, "towel rail on wall", size=9.5, fill="#4a5470")
-text(15, 65.3, "(open floor recess)", size=9, fill="#4a5470")
+text(54, 24.4, "floor trap below basin", size=9.5, fill="#4a5470")
+text(TW + PART + 3.2, 61, "towel rail", size=9.5, fill="#4a5470", rotate=-90)
 
 # steps label with leader
-add(f'<line x1="{X(39):.1f}" y1="{Y(48):.1f}" x2="{X(40):.1f}" y2="{Y(53.3):.1f}" stroke="#b5541c" stroke-width="1.2"/>')
-add(f'<rect x="{X(34.5):.1f}" y="{Y(53.3):.1f}" width="{L(16.8):.1f}" height="{L(3.2):.1f}" fill="#fff4ea" stroke="#b5541c" rx="3"/>')
-text(42.9, 55.5, "STEPS TO TOILET", size=10.5, weight="700", fill="#b5541c")
+add(f'<line x1="{X(39):.1f}" y1="{Y(48):.1f}" x2="{X(44):.1f}" y2="{Y(53.3):.1f}" stroke="#b5541c" stroke-width="1.2"/>')
+add(f'<rect x="{X(38.5):.1f}" y="{Y(53.3):.1f}" width="{L(16.8):.1f}" height="{L(3.2):.1f}" fill="#fff4ea" stroke="#b5541c" rx="3"/>')
+text(46.9, 55.5, "STEPS TO TOILET", size=10.5, weight="700", fill="#b5541c")
 
 # clear walking space
 add(f'<line x1="{X(STEP_X1):.1f}" y1="{Y(36):.1f}" x2="{X(ROOM):.1f}" y2="{Y(36):.1f}" stroke="#3d7a57" stroke-width="1.2" '
@@ -207,9 +207,7 @@ dim_h(0, ROOM, -16, '66" (5\'-6") INTERIOR CLEAR', size=13)
 # basin width
 dim_h(BAS_X0, BAS_X1, 17.0, '18"', size=10.5, off_label=-4)
 # left chain: 48 | 4 | 14
-dim_v(0, TD, -9, '48" toilet depth', ext_from=-EXT)
-dim_v(TD, TD + PART, -9, '4"', size=10, side=-1)
-dim_v(TD + PART, ROOM, -9, '14"', size=10.5)
+dim_v(0, TD, -9, '66" toilet depth (full)', ext_from=-EXT)
 dim_v(0, ROOM, -16, '66" (5\'-6") INTERIOR CLEAR', size=13)
 # right chain: toilet door + step location
 dim_v(0, BAS_D, ROOM + 9, '15"', size=10.5, ext_from=ROOM + EXT, side=1)
@@ -238,15 +236,15 @@ def ptxt(s, size=12.5, weight="normal", fill="#1f2a44", dy=20, indent=0):
 ptxt("KEY DIMENSIONS (approx.)", size=15, weight="700", dy=26)
 rows = [
     ("Overall bathroom (interior clear)", '66" × 66"  (5\'-6" × 5\'-6")'),
-    ("Toilet enclosure (clear, raised)", '30" W × 48" D'),
+    ("Toilet enclosure (clear, raised)", '30" W × 66" D (full depth)'),
     ("New partition wall", '4" thick (block + plaster)'),
     ("Toilet door", '22" opening, 21" leaf, opens inward'),
     ("Main entrance door", '26" opening, opens inward'),
-    ("Washbasin (wall-hung)", '18" W × 15" projection'),
+    ("Washbasin (wall-hung)", '18" W × 15" proj., floor trap below'),
     ("Compact commode", '15" W × 26" D (wall to bowl front)'),
     ("Steps to toilet", '2 risers × 7" = +14"; tread 10" × 22"'),
     ("Clear walk beside step", '22" min.'),
-    ("Clear in front of commode", '≈20" (bowl front to parked door)'),
+    ("Clear in front of commode", '40" to south wall (≈20" to open door)'),
     ("Clear floor in front of basin", '51" deep (basin front to entrance)'),
 ]
 for k, v in rows:
@@ -264,7 +262,7 @@ notes = [
     "Step 1 (+7\") sits in the washroom; step 2 (+14\") is the raised",
     "   threshold in the partition, level with the toilet floor.",
     "Toilet door swings INTO the raised toilet so it never sweeps the steps;",
-    "   leaf parks against the toilet's south partition, clearing the bowl.",
+    "   open leaf stands clear of the bowl; enclosure runs to the south wall.",
     "Washbasin on the top (north) wall, in line of sight from entrance.",
     "Entrance door leaf parks against the east wall, clearing step 1 by ~1\".",
 ]
